@@ -8,7 +8,7 @@ tags:
 # 安装前先看效果图
 
 ![效果图](https://img-blog.csdnimg.cn/48edcbdf2daa430b887244c624919247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center)
-
+<!-- more -->
 
 ## 一.安装[iTem2](https://iterm2.com/)
 点击标题即可下载,如果没有安装brew,执行下面命令一键安装brew并自动替换为国内镜像源
