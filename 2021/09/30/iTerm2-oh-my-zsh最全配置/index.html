@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>iTerm2+oh-my-zsh最全配置 | xin的个人网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="@TOC 安装前先看效果图 一.安装iTem2点击标题即可下载,如果没有安装brew,执行下面命令一键安装brew并自动替换为国内镜像源 1&#x2F;bin&#x2F;zsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)&quot;  二.安装oh-my-zsh可能会失败,多执行几遍到成功为止 1s">
+  <meta name="description" content="@TOC 安装前先看效果图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iTerm2+oh-my-zsh最全配置">
 <meta property="og:url" content="http://example.com/2021/09/30/iTerm2-oh-my-zsh%E6%9C%80%E5%85%A8%E9%85%8D%E7%BD%AE/">
 <meta property="og:site_name" content="xin的个人网站">
-<meta property="og:description" content="@TOC 安装前先看效果图 一.安装iTem2点击标题即可下载,如果没有安装brew,执行下面命令一键安装brew并自动替换为国内镜像源 1&#x2F;bin&#x2F;zsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)&quot;  二.安装oh-my-zsh可能会失败,多执行几遍到成功为止 1s">
+<meta property="og:description" content="@TOC 安装前先看效果图">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/48edcbdf2daa430b887244c624919247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/4e2f117e99af46c8b79e76597b379062.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/ddd26a64d4c947f4be88438178e2489c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/884c4f8542a4404aae1115adda067684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2021-09-30T02:57:47.000Z">
-<meta property="article:modified_time" content="2021-09-30T02:58:47.175Z">
+<meta property="article:modified_time" content="2021-10-11T06:10:12.201Z">
 <meta property="article:author" content="xinximo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/48edcbdf2daa430b887244c624919247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center">
@@ -184,6 +184,7 @@
       
         <p>@<a href="iTerm2+oh-my-zsh%E6%9C%80%E5%85%A8%E9%85%8D%E7%BD%AE">TOC</a></p>
 <h1 id="安装前先看效果图"><a href="#安装前先看效果图" class="headerlink" title="安装前先看效果图"></a>安装前先看效果图</h1><p><img src="https://img-blog.csdnimg.cn/48edcbdf2daa430b887244c624919247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center" alt="效果图"></p>
+<span id="more"></span>
 <h2 id="一-安装iTem2"><a href="#一-安装iTem2" class="headerlink" title="一.安装iTem2"></a>一.安装<a target="_blank" rel="noopener" href="https://iterm2.com/">iTem2</a></h2><p>点击标题即可下载,如果没有安装brew,执行下面命令一键安装brew并自动替换为国内镜像源</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/zsh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/4e2f117e99af46c8b79e76597b379062.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
