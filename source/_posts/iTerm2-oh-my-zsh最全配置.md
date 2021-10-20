@@ -1,10 +1,8 @@
 ---
 title: iTerm2+oh-my-zsh最全配置
 date: 2021-09-30 10:57:47
-tags:[iTem2 oh-my-zsh Mac]
+tags: [iTem2, oh-my-zsh, Mac]
 ---
-@[TOC]( iTerm2+oh-my-zsh最全配置)
-
 # 安装前先看效果图
 
 ![效果图](https://img-blog.csdnimg.cn/48edcbdf2daa430b887244c624919247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center)
