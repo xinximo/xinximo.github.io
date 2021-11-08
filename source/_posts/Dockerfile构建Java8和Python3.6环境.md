@@ -31,7 +31,7 @@ ENV JAVA_ALPINE_VERSION 8.282.08-r1
 RUN set -x \
     && apk add --no-cache openjdk8="$JAVA_ALPINE_VERSION" \
     && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-
+<!--more-->
 # 工作目录
 WORKDIR /app
 
