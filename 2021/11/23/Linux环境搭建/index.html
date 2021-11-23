@@ -16,7 +16,7 @@
 <meta property="og:description" content="一. linux中安装MySQL1.新建本地文件夹 12mkdir -p  ~&#x2F;software&#x2F;mysql&#x2F;conf  ~&#x2F;software&#x2F;mysql&#x2F;logs  ~&#x2F;software&#x2F;mysql&#x2F;data  2.远程拉取MySQL 12docker pull mysql  3.运行一个实例 12docker run -it -d  --name mysql -e MYSQL_ROOT_PAS">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-23T09:48:13.000Z">
-<meta property="article:modified_time" content="2021-11-23T09:49:15.386Z">
+<meta property="article:modified_time" content="2021-11-23T11:12:05.410Z">
 <meta property="article:author" content="xinximo">
 <meta name="twitter:card" content="summary">
   
@@ -180,7 +180,7 @@
 
 <p>3.运行一个实例</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -d  --name mysql -e MYSQL_ROOT_PASSWORD=123456 mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<span id="more"></span>
 <p>4.复制该实例的配置文件到 server 当中：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker cp mysql:/etc/mysql/conf.d ~/software/mysql/conf</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
