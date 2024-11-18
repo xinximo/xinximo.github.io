@@ -2,7 +2,6 @@
 title: 'kafka安装(for Mac)并实例生产者消费者,且打包jar文件服务器运行'
 date: 2021-10-11 16:26:29
 tags: [kafka, Mac]
-top: true
 ---
 # kafka安装for Mac
 ## 1.brew安装

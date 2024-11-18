@@ -13,8 +13,8 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-#url: https://xinximo.github.io/
-url: https://121.40.245.229/hexo
+url: https://xinximo.github.io
+#url: https://xinximo.com/blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -104,8 +104,8 @@ theme: yilia
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  #repo: git@github.com:xinximo/xinximo.github.io.git 
-  repo: root@121.40.245.229:/root/software/repo/xinximoBlog.git
+  repo: git@github.com:xinximo/xinximo.github.io.git
+  #repo: root@121.40.245.229:/root/software/repo/xinximoBlog.git
   #branch: deploy
   branch: master
   message: hexo-deploy

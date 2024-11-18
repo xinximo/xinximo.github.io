@@ -31,7 +31,6 @@ ENV JAVA_ALPINE_VERSION 8.282.08-r1
 RUN set -x \
     && apk add --no-cache openjdk8="$JAVA_ALPINE_VERSION" \
     && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-<!--more-->
 # 工作目录
 WORKDIR /app
 
@@ -45,6 +44,7 @@ ENV TERM xterm
 #pythonpath
 ENV PYTHONPATH="/app:$PYTHONPATH"
 ```
+<!--more-->
 # 二. 拉取镜像并运行
 注意:因为在Mac和Linux系统镜像构建时的核心有区别,会导致互相运行时概率报错,请使用对应的镜像: \
 Mac下运行:
