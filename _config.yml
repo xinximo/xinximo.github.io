@@ -106,8 +106,9 @@ deploy:
   type: git
   repo: git@github.com:xinximo/xinximo.github.io.git
   #repo: root@121.40.245.229:/root/software/repo/xinximoBlog.git
-  #branch: deploy
-  branch: master
+  branch: deploy
+  #branch: master
+  token: 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
   message: hexo-deploy
 
 jsonContent:
