@@ -3,6 +3,8 @@ title: Linux搭建hexo服务器
 date: 2021-11-23 17:28:04
 tags: [Linux, hexo, nginx]
 ---
+<meta name="referrer" content="no-referrer"/>
+
 # 一.在自己的服务器上建立git仓库
 
 ## 1.首先安装git
@@ -22,7 +24,7 @@ mkdir ~/software/repo
 cd ~/software/repo
 git init --bare {自定义仓库名name}.git
 ```
-![Linux搭建hexo服务器图片1.png](/blog/images/Linux搭建hexo服务器图片1.png)
+![Linux搭建hexo服务器图片1.png](images/Linux搭建hexo服务器图片1.png)
 <!--more-->
 ## 4.Git钩子
 
