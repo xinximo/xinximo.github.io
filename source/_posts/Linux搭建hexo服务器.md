@@ -15,7 +15,7 @@ yum install git -y
 ```
 
 ## 2.nginx安装教程参考我的这篇Docker安装nginx教程:
-https://xinximo.com/blog/2021/11/23/Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/
+https://xinximo.github.io/2021/11/23/Linux%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/
 
 ## 3.建立文件夹:
 
@@ -24,7 +24,7 @@ mkdir ~/software/repo
 cd ~/software/repo
 git init --bare {自定义仓库名name}.git
 ```
-![Linux搭建hexo服务器图片1.png](images/Linux搭建hexo服务器图片1.png)
+{% asset_img Linux搭建hexo服务器图片1.png "附图" %}
 <!--more-->
 ## 4.Git钩子
 
