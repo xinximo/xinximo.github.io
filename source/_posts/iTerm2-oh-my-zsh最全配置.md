@@ -24,15 +24,44 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```
 
 ## 三.安装[Powerline](https://powerline.readthedocs.io/en/latest/installation.html)
-首先需要安装pip命令(也可自行安装Python自带pip),再安装Powerline
+
+1、首先需要安装pip命令(推荐直接安装Python3，自带pip),再安装Powerline
+
 ```bash
 sudo easy_install pip
 pip install powerline-status
 ```
-或者
+或者（强烈推荐）
+
 ```bash
-brew install python3
-pip3 install powerline-status
+# 安装pyenv
+brew install pyenv
+
+# 验证是否安装成功
+pyenv -v
+```
+2、在根目录`.zshrc`插入环境变量:
+
+```bash
+# Zsh Shell配置
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/shims:$PATH"
+eval "$(pyenv init -)"
+```
+3、安装python3
+
+```bash
+# 安装
+pyenv install 3.9.6
+# 设置 全局的Python版本
+pyenv global 3.9.6
+# 显示当前活动的Python版本
+pyenv version
+```
+4、安装`powerline-status`
+
+```bash
+pip install powerline-status
 ```
 
 ## 四.安装 [Meslo](https://github.com/powerline/fonts) 字体库
@@ -63,25 +92,16 @@ vim ~/.zshrc
 ```
 找到ZSH_THEME,参数改成"agnoster"
 ![修改参数](https://img-blog.csdnimg.cn/ddd26a64d4c947f4be88438178e2489c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center)
-## 六.安装语法高亮
 
-```bash
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-在根目录`.zshrc`插入(注意{your_system_name}需要替换你的系统用户名):
+## 六.安装代码补全插件
 
-```bash
-source /Users/{your_system_name}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-plugins=(
-  git
-  zsh-syntax-highlighting
-)
-```
-## 七.安装代码补全插件
 1、`zsh-completions`
+
 ```bash
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
 ```
+
 在根目录`.zshrc`插入:
 
 ```bash
@@ -89,33 +109,73 @@ plugins=(
   git
   zsh-completions
 )
-autoload -U compinit && compinit
 ```
+
 2、`zsh-autosuggestions`：补全的是历史输入的命令，点击方向键->即可补全
 
 ```bash
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
 ```
+
 在根目录`.zshrc`插入:
 
 ```bash
 plugins=(
   git
+  zsh-completions
   zsh-autosuggestions
 )
+
 ```
+
 因为之前调整过背景色,这边默认是灰色,实际效果展示不出,所以要修改配置文件,调整自动补全的底色:
 打开文件:
+
 ```bash
 vim ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 ```
+
 修改内容:
 
 ```bash
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 ```
+
 ![修改配色](https://img-blog.csdnimg.cn/884c4f8542a4404aae1115adda067684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpbnhpbW8=,size_16,color_FFFFFF,t_70#pic_center)
-**注意:安装上述所有内容后,一定要执行`source ~/.zshrc`使配置生效**
+
+## 七.安装语法高亮
+
+1、`zsh-syntax-highlighting`
+
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+```
+
+在根目录`.zshrc`插入:
+
+```bash
+plugins=(
+  git
+  zsh-completions
+  zsh-autosuggestions  # 在highlighting前
+  zsh-syntax-highlighting  # 必须放最后
+)
+# 加载插件后再初始化补全（保证加载顺序）
+autoload -U compinit && compinit
+
+```
+
+**注意:安装上述所有内容后,一定要执行配置生效命令**
+
+```bash
+sed -i '' '/source.*zsh-autosuggestions.zsh/d' ~/.zshrc  # 删除重复source
+sed -i '' 's/plugins=(.*)/plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting)/' ~/.zshrc  # 修正顺序
+source ~/.zshrc  # 重新加载配置
+```
+
 ## 八.常用命令
 ```bash
 # 查看shell
